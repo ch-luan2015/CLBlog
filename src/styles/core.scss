@@ -1,0 +1,66 @@
+// Primaty Dark Themes Color
+$Dtext-color: #d6c9b6 !default;
+$DBg: #211610 !default;
+$DBgMenu: #2e231d !default;
+$DBgButton: #ffd978 !default;
+$DTButton: #333333 !default;
+$DIcon: #b7b574 !default;
+$DBorder: #453128 !default;
+
+// Primaty Light Themes Color
+$Ltext: #050505 !default;
+$LBg: #f0f2f5 !default;
+$LBgMenu: #ffffff !default;
+$LBgButton: #f8d10c !default;
+$LTButton: #000000 !default;
+$LIcon: #b7b574 !default;
+$LBorder: #333333 !default;
+
+//Badge 
+$BOne: #6C757D !default;
+$BTwo: #6A7A96  !default;
+$BThree : #FD7E14 !default;
+
+//Danger and Success
+$cl-danger: #FF0000 !default;
+$cl-success : #7FAA40 !default;
+
+
+$black: hsla(28, 59, 9, 1) !default;
+$gray2: hsl(28, 13, 52) !default;
+$gray3: hsl(28, 15, 60) !default;
+$gray4: hsl(28, 18, 71) !default;
+$gray5: hsl(28, 22, 79) !default;
+
+$dark-gray1: hsl(28, 16, 9) !default;
+$dark-gray2: hsl(28, 13, 13) !default;
+$dark-gray3: hsl(28, 15, 18) !default;
+$dark-gray4: hsl(28, 18, 22) !default;
+$dark-gray5: hsl(28, 22, 26) !default;
+
+$light-gray1: hsl(0, 0, 84) !default;
+$light-gray2: hsl(0, 0, 88) !default;
+$light-gray3: hsl(0, 0, 91) !default;
+$light-gray4: hsl(0, 0, 94) !default;
+$light-gray5: hsl(0, 0, 97) !default;
+
+$break-small: 700px !default;
+$break-large: 1012px !default;
+
+@mixin media($device) {
+  @if $device == phone {
+    @media only screen and (max-width: $break-small) {
+      @content;
+    }
+  } @else if $device == tablet {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) {
+      @content;
+    }
+  } @else if $device == pc {
+    @media only screen and (min-width: $break-large) {
+      @content;
+    }
+  }
+}
+
+@import "~@blueprintjs/core/src/common/variables.scss";

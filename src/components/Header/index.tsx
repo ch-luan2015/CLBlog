@@ -11,6 +11,7 @@ const Header: React.FC = () => {
         ? <Full />
         : <Full />
       }
+  
     </Media>
   );
 }

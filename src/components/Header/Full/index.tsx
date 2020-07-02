@@ -1,23 +1,33 @@
-import * as React from 'react';
-import logo from './new2.png';
-import { Menu, MenuItem, Navbar, Classes, Alignment, AnchorButton, Popover, PopoverInteractionKind, Position, Button } from "@blueprintjs/core";
+import * as React from "react";
+import logo from "./hsbt-logo-kid.png";
+
 import { Link } from "react-router-dom";
+
+import  {Searchbar}  from "components/Searchbar";
 import styles from "./styles.module.scss";
 
-export interface IAppProps {
-}
-
-export default class App extends React.Component<IAppProps> {
-  public render() {
+export default class HeaderFull extends React.Component {
+  render() {
     return (
-      <>
+      <div className={styles.main}>
+
+          <Link to="/" className={styles.leftMenu}>
+            <img alt="logo" src={logo} className={styles.logo} /> 
+            <span >Xàm xí cùng Lựng </span>
+          </Link>
+          
+      
         <div>
-        <Link to="/">
-            <img alt="logo" src={logo} className={styles.logo} />
-        </Link>
+            <Searchbar/>
         </div>
-        <div></div>
-      </>
+
+
+        <div className={styles.rightMenu}>
+            <i className="fab fa-facebook "/>
+            <i className="fab fa-youtube " />
+            <i className="fas fa-sign-in-alt " />
+        </div>
+      </div>
     );
   }
 }

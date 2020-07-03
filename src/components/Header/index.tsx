@@ -6,13 +6,7 @@ import Full from "./Full";
 
 const Header: React.FC = () => {
   return (
-    <Media query={{ maxWidth: 700 }}>
-      {(isPhone: boolean) => isPhone
-        ? <Full />
-        : <Full />
-      }
-  
-    </Media>
+   <Full/>
   );
 }
 

@@ -1,41 +1,24 @@
 import * as React from "react";
 
-import { Icon, InputGroup } from "@blueprintjs/core";
-
-export interface IExampleProps {
+import { InputGroup, Classes } from "@blueprintjs/core";
+import './styles.module.scss'
+export interface IProps {
   disabled?: boolean;
   large?: boolean;
   small?: boolean;
 }
 
-export interface IInputGroupExampleState {
-  disabled?: boolean;
-  large?: boolean;
-  small?: boolean;
-}
 
-export class Searchbar extends React.PureComponent<
-  IExampleProps,
-  IInputGroupExampleState
-> {
-  public state: IInputGroupExampleState = {
-    disabled: false,
-    large: true,
-    small: false,
-  };
-
+export class Searchbar extends React.PureComponent<IProps> {
+ 
   public render() {
     return (
-      <InputGroup
-        
-        disabled={false}
-        round={true}
-        large={true}
-       fill={true}
-        leftIcon="search"
-        placeholder="Gõ điều muốn tìm vào..."
-        // rightElement={<Icon icon={"arrow-right"} iconSize={48} />}
-      />
+      <InputGroup  className={Classes.LARGE}
+      large={true}
+      type="text"
+      placeholder="Gõ điều bạn muốn tìm..."
+     
+    />
     );
   }
 }

@@ -3,8 +3,8 @@ import logo from "./hsbt-logo-kid.png";
 
 import { Link } from "react-router-dom";
 
-import  {Searchbar}  from "components/Searchbar";
 import styles from "./styles.module.scss";
+import  {Searchbar}  from "components/Searchbar";
 
 export default class HeaderFull extends React.Component {
   render() {
@@ -17,8 +17,8 @@ export default class HeaderFull extends React.Component {
           </Link>
           
       
-        <div>
-            <Searchbar/>
+        <div className={styles.midMenu}>
+            <Searchbar />
         </div>
 
 

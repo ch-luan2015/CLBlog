@@ -6,25 +6,23 @@
   align-items: center ;
   flex-direction: row;
   flex-wrap: nowrap;
-  height: 14vh;
+  height: 10vh;
   border-bottom: 1px solid;
   border-bottom-color: $DBorder;
+  max-width: 100%;
 }
-// .midMenu{
-//   display: flex;
-//   flex-direction: row;
-//   flex-wrap: nowrap;
-//   align-items: baseline;
-//   justify-content: center;
-//   width: 50%;
-//   font-size: xx-large;
-//   border-radius: 5% !important;
+.midMenu{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  justify-content: center;
+  width: 30%;
 
-  
-// }
+}
 
 .leftMenu {
-  width:25%;
+  width:30% !important;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -32,23 +30,35 @@
   justify-content: center;
   color: $Dtext-color;
   text-decoration: none;
-  font-size: x-large;
+  font-size: large;
   @include media(phone) { display: none; }
+
+  .logo {
+    margin-right: 5%;
+    width: 50px;
+    @include media(phone) { display: none; }
+  }
+  p{
+    padding-top: 12px;
+    color:$Dtext-color !important;
+    text-decoration: none;
+    &:focus, &:hover, &:visited, &:link, &:active {
+      text-decoration: none;
+      color: $DBgButton !important;
+  }
+  }
+ 
 
 }
 
-.logo {
-  margin-right: 5%;
-  width: 98px;
-  @include media(phone) { display: none; }
-}
 
 .rightMenu{
   width:25% !important;
   display: flex;
-  justify-content: center;
-  align-items: flex-end ;
+  justify-content: flex-end;
+  align-items: center ;
   flex-direction: row;
+  padding-right: 100px;
 
    i{
     margin-right: 8% !important;  

@@ -11,9 +11,9 @@ export default class HeaderFull extends React.Component {
     return (
       <div className={styles.main}>
 
-          <Link to="/" className={styles.leftMenu}>
+          <Link to="/" className={styles.leftMenu} style={{textDecoration:'none'}}>
             <img alt="logo" src={logo} className={styles.logo} /> 
-            <span >Xàm xí cùng Lựng </span>
+            <p >Xàm xí cùng Lựng </p>
           </Link>
           
       

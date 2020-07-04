@@ -13,11 +13,11 @@ import "./styles/core.scss";
 const App: React.FC = () => {
   return (
     <div className={styles.main}>
-      <Card interactive={true} elevation={Elevation.TWO}>
+      {/* <Card interactive={true} elevation={Elevation.TWO}>
         <h5><a href="#">Card heading</a></h5>
           <p>Card content</p>
           <Button>Submit</Button>
-        </Card>
+        </Card> */}
 
       <BrowserRouter>
         <Header />

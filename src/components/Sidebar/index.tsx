@@ -1,51 +1,107 @@
-import React, { Component } from 'react'
-import { Classes, Icon, Menu, MenuDivider, MenuItem } from "@blueprintjs/core";
-interface Props {
-    
-}
-interface State {
-    
-}
+import React, { Component } from "react";
+import {
+  Classes,
+  Icon,
+  Menu,
+  MenuDivider,
+  MenuItem,
+  Popover,
+  
+} from "@blueprintjs/core";
+
+import styles from "./styles.module.scss";
+
+export const gameMenu = [
+  {
+    title: "Game",
+    menuItem: [
+      { icon: "new-text-box", text: "Đánh giá game" },
+      { icon: "new-text-box", text: "Tâm sự" },
+      { icon: "new-text-box", text: "Chuyên đề" },
+      { icon: "new-text-box", text: "Thế giới game" },
+    ],
+  },
+  {
+    title: "Giải Trí",
+    menuItem: [
+      { icon: "new-text-box", text: "Manga / Anime" },
+      { icon: "new-text-box", text: "Nhạc" },
+      { icon: "new-text-box", text: "Thú dzui khác" },
+      { icon: "new-text-box", text: "Phần cứng" },
+    ],
+  },
+  {
+      title: "",
+      menuItem:[
+        { icon: "new-text-box", text: "Chuyên mục riêng MacOS" },
+ 
+      ]
+  }
+];
+
+export const macMenu = [
+  { icon: "new-text-box", text: "Phần mềm" },
+  { icon: "new-text-box", text: "Thủ thuật" },
+  { icon: "new-text-box", text: "Review mac mỗi năm" },
+];
+
+interface Props {}
+interface State {}
 
 export default class Sidebar extends Component<Props, State> {
-    state = {}
+  state = {};
 
-    render() {
-        return (
-         <>
-                <Menu className={Classes.ELEVATION_1}>
-                    <MenuItem  text="Trang Chủ" />
-                </Menu>
-                <Menu className={Classes.ELEVATION_1}>
-                    <MenuDivider title="Game" />
-                    <MenuItem icon="new-text-box" text="Đánh giá game" />
-                    <MenuItem icon="new-object" text="Tâm sự" />
-                    <MenuItem icon="new-link" text="Chuyên đề" />
-                    <MenuItem icon="new-link" text="Thế giới game" />
-                </Menu>
-                <Menu className={Classes.ELEVATION_1}>
-                    <MenuDivider title="Giải trí" />
-                    <MenuItem icon="cut" text="Manga / Anime" label="⌘X" />
-                    <MenuItem icon="duplicate" text="Nhạc" label="⌘C" />
-                    <MenuItem icon="clipboard" text="Thú dzui khác" label="⌘V"  />
-                    
+  menuGame = (gameMenu: any) => {
+    return (
+      <Menu className={styles.main }>
+        {gameMenu.map((item: any) => {
+          return (
+            <>
+              <MenuDivider title={item.title}  className={styles.divider}/>
+              {item.menuItem.map((menuItem: any) => {
+                return <Menu.Item icon={menuItem.icon} text={menuItem.text} />;
+              })}
+            </>
+          );
+        })}
+      </Menu>
+    );
+  };
 
-                    <MenuItem  icon="align-left" text="Phần cứng ">
-                        <MenuItem icon="align-left" text="Left" />
-                        <MenuItem icon="align-center" text="Center" />
-                        <MenuItem icon="align-right" text="Right" />
-                        <MenuItem icon="align-justify" text="Justify" />
-                    </MenuItem>
-                </Menu>
-                <Menu className={Classes.ELEVATION_1}>
-                    <MenuItem icon="clipboard" text="Chuyên mục riêng cho MacOS" >
-                        <MenuItem icon="cut" text="Phần mềm" label="⌘X" />
-                        <MenuItem icon="duplicate" text="Thủ thuật" label="⌘C" />
-                        <MenuItem icon="clipboard" text="Review Mac mỗi năm" label="⌘V"  />
-                    </MenuItem>
-                   
-                </Menu>
-        </>
-        )
-    }
+//   menuMacOs = (macMenu: any) => {
+//     return (
+
+//         <MenuItem 
+//           icon="clipboard"
+//           text="Chuyên mục riêng cho MacOS"
+//           className={`${Classes.DARK} ${styles.main}`}
+//         >
+//           {macMenu.map((item: any) => {
+//             return (
+//               <MenuItem
+//                 icon={item.icon}
+//                 text={item.text}
+//                 className={styles.main}
+//               />
+//             );
+//           })}
+//         </MenuItem>
+
+//     );
+//   };
+
+  render() {
+    return (
+      <div>
+        <Menu className={styles.main}>
+          <Menu.Item text="Trang Chủ" className={styles.homeMenu}/>
+        </Menu>
+   
+        {this.menuGame(gameMenu)}
+        {/* {this.menuMacOs(macMenu)} */}
+ 
+       
+      </div>
+    );
+  }
 }

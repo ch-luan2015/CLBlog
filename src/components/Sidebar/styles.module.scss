@@ -1,0 +1,18 @@
+@import "../../styles/core.scss";
+
+.main {
+    color: $Dtext-color !important;
+    background: $DBg !important;
+}
+
+.homeMenu{
+    color : $DBgButton !important;
+    font-size: normal;
+    font-weight: bold;
+  
+}
+
+.divider > h1,h2,h3,h4,h5,h6{
+        color:$DBgButton !important 
+}
+

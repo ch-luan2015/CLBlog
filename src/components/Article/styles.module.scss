@@ -1,0 +1,39 @@
+@import "styles/core.scss";
+
+
+.main{
+    color: $Dtext-color !important;
+    background-color: $LBg !important;
+    width: 80% !important;
+
+    .leftMenu {
+        width:100% !important;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: left;
+        align-items: center;
+        color: $Dtext-color;
+        text-decoration: none;
+        font-size: large;
+        @include media(phone) { display: none; }
+      
+        .logo {
+          margin-right: 5%;
+          width: 50px;
+          @include media(phone) { display: none; }
+        }
+        p{
+          // padding-top: 12px;
+          color:$Dtext-color !important;
+          text-decoration: none;
+          &:focus, &:hover, &:visited, &:link, &:active {
+            text-decoration: none;
+            color: $DBgButton !important;
+        }
+        }
+       
+      
+      }
+      
+}

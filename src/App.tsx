@@ -3,8 +3,8 @@ import "./App.module.scss";
 import { BrowserRouter } from "react-router-dom";
 import Header from "components/Header";
 import styles from "./App.module.scss";
-import Sidebar from "components/Sidebar"
-import { Button, Card, Elevation } from "@blueprintjs/core";
+import Sidebar from "components/Sidebar";
+import Article from "components/Article";
 
 
 
@@ -16,11 +16,13 @@ const App: React.FC = () => {
           <Header />
         </div>
         <div className={styles.body}>
-          <div className={styles.side} style={{border: '2px solid yellow'}}>
+          <div className={styles.side}>
             <Sidebar />
           </div>
-          <div className={styles.content}><p style={{border: '2px solid red'}}>This content</p></div>
-          <div className={styles.news}><p style={{border: '2px solid green'}}>This news</p></div>
+          <div className={styles.content}>
+            <Article/>
+          </div>
+          <div className={styles.news}></div>
         </div>
         <div className={styles.footer}></div>
     </div>

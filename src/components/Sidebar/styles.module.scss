@@ -1,18 +1,43 @@
 @import "../../styles/core.scss";
 
 .main {
-    color: $Dtext-color !important;
-    background: $DBg !important;
-}
+  width: 300px !important;
+  display: flex;
+  flex-direction: column !important;
+  flex-wrap: wrap;
+  justify-content: center !important;
+  align-items: center !important;
 
-.homeMenu{
-    color : $DBgButton !important;
+
+  .menu {
+    color: $Dtext-color !important;
+    background-color: $DBg !important;
+    width: 100% !important;
+  }
+  .button {
+    color: $DTButton !important;
+    background-color: $DBgButton !important;
+    font-size: normal;
+    font-weight: bolder;
+    height: 40px !important;
+    width: 75% !important;
+    padding: 10px 20px !important;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .homeMenu {
+    color: $DBgButton !important;
     font-size: normal;
     font-weight: bold;
+  }
   
-}
-
-.divider > h1,h2,h3,h4,h5,h6{
-        color:$DBgButton !important 
+  .divider > h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $DBgButton !important;
+  }
 }
 

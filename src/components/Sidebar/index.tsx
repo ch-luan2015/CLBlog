@@ -5,7 +5,7 @@ import {
   Menu,
   MenuDivider,
   MenuItem,
-  Popover,
+  AnchorButton
   
 } from "@blueprintjs/core";
 
@@ -53,13 +53,13 @@ export default class Sidebar extends Component<Props, State> {
 
   menuGame = (gameMenu: any) => {
     return (
-      <Menu className={styles.main }>
+      <Menu className={styles.menu}>
         {gameMenu.map((item: any) => {
           return (
             <>
               <MenuDivider title={item.title}  className={styles.divider}/>
               {item.menuItem.map((menuItem: any) => {
-                return <Menu.Item icon={menuItem.icon} text={menuItem.text} />;
+                return <MenuItem icon={menuItem.icon} text={menuItem.text} />;
               })}
             </>
           );
@@ -92,9 +92,14 @@ export default class Sidebar extends Component<Props, State> {
 
   render() {
     return (
-      <div>
-        <Menu className={styles.main}>
-          <Menu.Item text="Trang Chủ" className={styles.homeMenu}/>
+      <div className={styles.main}>
+        <AnchorButton 
+        className={styles.button}
+        text="Viết bài có nhuận bút" 
+        minimal
+        />
+        <Menu className={styles.menu}>
+          <MenuItem text="Trang Chủ" className={styles.homeMenu}/>
         </Menu>
    
         {this.menuGame(gameMenu)}

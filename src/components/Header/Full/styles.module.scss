@@ -10,12 +10,14 @@
   border-bottom: 1px solid;
   border-bottom-color: $DBorder;
   max-width: 100%;
+  padding: 48px 0 ;
+  
 }
 .midMenu{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
   width: 30%;
 
@@ -39,7 +41,7 @@
     @include media(phone) { display: none; }
   }
   p{
-    padding-top: 12px;
+    // padding-top: 12px;
     color:$Dtext-color !important;
     text-decoration: none;
     &:focus, &:hover, &:visited, &:link, &:active {

@@ -15,25 +15,25 @@ export const gameMenu = [
   {
     title: "Game",
     menuItem: [
-      { icon: "new-text-box", text: "Đánh giá game" },
-      { icon: "new-text-box", text: "Tâm sự" },
-      { icon: "new-text-box", text: "Chuyên đề" },
-      { icon: "new-text-box", text: "Thế giới game" },
+      { icon: "fab fa-affiliatetheme", text: "Đánh giá game" },
+      { icon: "fas fa-heart", text: "Tâm sự" },
+      { icon: "fas fa-book-dead", text: "Chuyên đề" },
+      { icon: "fas fa-dungeon", text: "Thế giới game" },
     ],
   },
   {
     title: "Giải Trí",
     menuItem: [
-      { icon: "new-text-box", text: "Manga / Anime" },
-      { icon: "new-text-box", text: "Nhạc" },
-      { icon: "new-text-box", text: "Thú dzui khác" },
-      { icon: "new-text-box", text: "Phần cứng" },
+      { icon: "fas fa-book-open", text: "Manga / Anime" },
+      { icon: "fas fa-guitar", text: "Nhạc" },
+      { icon: "fas fa-beer", text: "Thú dzui khác" },
+      { icon: "fas fa-desktop", text: "Phần cứng" },
     ],
   },
   {
       title: "",
       menuItem:[
-        { icon: "new-text-box", text: "Chuyên mục riêng MacOS" },
+        { icon: "fab fa-apple", text: "Chuyên mục riêng MacOS" },
  
       ]
   }
@@ -59,7 +59,7 @@ export default class Sidebar extends Component<Props, State> {
             <>
               <MenuDivider title={item.title}  className={styles.divider}/>
               {item.menuItem.map((menuItem: any) => {
-                return <MenuItem icon={menuItem.icon} text={menuItem.text} />;
+                return <MenuItem style={{margin:'5%'}} icon={<i className={`${menuItem.icon}`}/>} text={menuItem.text} />;
               })}
             </>
           );

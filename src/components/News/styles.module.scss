@@ -1,0 +1,21 @@
+@import "styles/core.scss";
+
+.main {
+  
+  .note{
+    width: 75%;
+    padding:21px;
+    line-height: 24px;
+    border: 2px solid $DBorder;
+    margin-bottom: 36px !important;
+  }
+
+  .image {
+    img {
+      width: 75%;
+    }
+   
+  }
+
+
+}

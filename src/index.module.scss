@@ -4,6 +4,7 @@
 
 html, body {
   min-height: 100%;
+  font-size: medium;
 }
 
 body {
@@ -23,5 +24,11 @@ fieldset {
 h1 {
   font-weight: 700 !important;
   font-family: "Muli" !important;
+}
+
+h2 ,h3,h4{
+  font-weight: 500;
+  font-family: "Muli" !important;
+  color: $DBgButton;
 }
 

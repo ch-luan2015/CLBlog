@@ -5,6 +5,7 @@ import Header from "components/Header";
 import styles from "./App.module.scss";
 import Sidebar from "components/Sidebar";
 import Article from "components/Article";
+import News from "components/News";
 
 
 
@@ -22,7 +23,9 @@ const App: React.FC = () => {
           <div className={styles.content}>
             <Article/>
           </div>
-          <div className={styles.news}></div>
+          <div className={styles.news}>
+            <News/>
+          </div>
         </div>
         <div className={styles.footer}></div>
     </div>

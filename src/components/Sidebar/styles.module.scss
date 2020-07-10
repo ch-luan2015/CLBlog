@@ -20,10 +20,11 @@
     font-size: normal;
     font-weight: bolder;
     height: 40px !important;
-    width: 75% !important;
-    padding: 10px 20px !important;
-    align-items: center;
+    width: 70% !important;
+    padding: 10px 10px !important;
+    align-items: flex-start;
     margin-bottom: 24px;
+    margin-right: 20%;
   }
   .homeMenu {
     color: $DBgButton !important;

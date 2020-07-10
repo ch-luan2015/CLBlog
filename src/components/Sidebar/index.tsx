@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import {
-  Classes,
-  Icon,
+
   Menu,
   MenuDivider,
   MenuItem,
@@ -97,6 +96,7 @@ export default class Sidebar extends Component<Props, State> {
         className={styles.button}
         text="Viết bài có nhuận bút" 
         minimal
+     
         />
         <Menu className={styles.menu}>
           <MenuItem text="Trang Chủ" className={styles.homeMenu}/>

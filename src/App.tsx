@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.module.scss";
-import { BrowserRouter } from "react-router-dom";
 import Header from "components/Header";
 import styles from "./App.module.scss";
 import Sidebar from "components/Sidebar";
@@ -11,7 +10,6 @@ import News from "components/News";
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
     <div className={styles.main}>
         <div className={styles.header}>
           <Header />
@@ -29,7 +27,6 @@ const App: React.FC = () => {
         </div>
         <div className={styles.footer}></div>
     </div>
-    </BrowserRouter>
   );
 };
 
